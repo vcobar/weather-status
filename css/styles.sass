@@ -1,35 +1,38 @@
 @import "bourbon/bourbon"
 
+body
+  @include padding(0)
+  @include margin(0)
+  text-align: center
+
 #root
   @include size(479px auto)
   @include padding(0)
   @include margin(0)
+  text-align: center
+  display: inline-block
 
 .searchBar
-  @include size(310px auto)
-  @include margin(0 auto)
+  display: inline-block
+
+.searchBar form
+  @include size(380px auto)
+  float: left
 
 .weatherLogo
   @include size(90px 67px)
-  @include position(absolute, 8px null null 3px)
   @include border-left-radius(5px)
-
-.searchButton
-  @include button(simple, orange)
-  @include position(absolute, 8px null null 370px)
-  @include padding(25px 30px)
-  @include border-left-radius(0)
-  font-size: 12px
+  float: left
 
 // floating labels
 .fieldContainer
-  @include size(270px 60px)
-  @include position(relative)
+  @include size(313px 60px)
+  float: left
 
 .field
-  @include padding(5px)
+  @include padding(0)
   @include margin(0)
-  @include size(100% 30px)
+  @include size(310px 30px)
   @include border-color(#c2c7d0)
   @include border-style(solid)
   @include border-width(normal null normal normal)
@@ -43,13 +46,12 @@ input:required:invalid
   box-shadow: none
 
 .floating-label
-  @include position(absolute, 36px null null 0)
   @include margin(0)
-  @include padding(6px 6px null)
+  @include padding(0)
   @include background(#2B2623)
   @include border-style(solid)
   @include transition(0.2s ease-in-out)
-  @include size(100% auto)
+  @include size(312px 29px)
   border-bottom-color: #2B2623
   border-bottom-width: medium
   border-top-width: thin
@@ -64,13 +66,16 @@ input:required:invalid
   text-align: center
   color: #ccc
   opacity: 1
+  display: block
 
 .field:focus + .floating-label
   @include background(#0B0500)
-  // @include border-color(#c2c7d0)
   color: #ECA163
 
-.field:valid + .floating-label,
-  // @include background(#FFD5B5)
-
-@media only screen and (min-width: 480px)
+.searchButton
+  @include button(simple, orange)
+  @include padding(25px 10px)
+  @include border-left-radius(0)
+  @include size(65px 67px)
+  font-size: 12px
+  float: left
