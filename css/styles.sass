@@ -6,7 +6,7 @@ body
   text-align: center
 
 #root
-  @include size(479px auto)
+  @include size(320px auto)
   @include padding(0)
   @include margin(0)
   text-align: center
@@ -16,23 +16,27 @@ body
   display: inline-block
 
 .searchBar form
-  @include size(380px auto)
+  @include size(253px auto)
   float: left
 
 .weatherLogo
-  @include size(90px 67px)
+  @include size(65px)
   @include border-left-radius(5px)
+  @include border-style(solid)
+  @include border-width(thin)
+  @include border-color(#c2c7d0)
+  border-right: none
   float: left
 
 // floating labels
 .fieldContainer
-  @include size(313px 60px)
+  @include size(188px 60px)
   float: left
 
 .field
   @include padding(0)
   @include margin(0)
-  @include size(310px 30px)
+  @include size(188px 30px)
   @include border-color(#c2c7d0)
   @include border-style(solid)
   @include border-width(normal null normal normal)
@@ -51,9 +55,9 @@ input:required:invalid
   @include background(#2B2623)
   @include border-style(solid)
   @include transition(0.2s ease-in-out)
-  @include size(312px 29px)
+  @include size(188px 31px)
   border-bottom-color: #2B2623
-  border-bottom-width: medium
+  border-bottom-width: thin
   border-top-width: thin
   border-top-color:  #c2c7d0
   border-left-width: thin
