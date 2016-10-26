@@ -3,13 +3,19 @@
 body
   @include padding(0)
   @include margin(0)
+  @include background(mintcream)
   text-align: center
   font-family: $helvetica
+  overflow-y: scroll
+
+body::-webkit-scrollbar
+  display: none
 
 #root
-  @include size(320px auto)
+  @include size(320px 100%)
   @include padding(0)
   @include margin(0)
+  @include background(white)
   text-align: center
   display: inline-block
 
@@ -26,6 +32,7 @@ body
 
 .searchBar
   display: inline-block
+  height: 70px
 
 .searchBar form
   @include size(253px auto)
@@ -98,5 +105,32 @@ input:required:invalid
 #weatherData
   @include size(100% auto)
 
-#weatherData th.city
-  font-size: 8px
+#weatherData .city
+  @include border-color(#fff null)
+  @include border-style(solid null)
+  @include border-width(5px null)
+  @include size(98% auto)
+
+.city .cityName
+  @include background(lightblue)
+  @include size(100% auto)
+  @include border-color(#2B2623)
+  @include border-style(solid)
+  @include border-width(1px)
+  @include border-top-radius(5px)
+  line-height: 30px
+
+.city .cityData
+  @include background(azure)
+  @include size(100% auto)
+  @include border-color(null #2B2623 #2B2623 #2B2623)
+  @include border-style(null solid solid solid)
+  @include border-width(null 1px 1px 1px)
+  @include border-bottom-radius(5px)
+  line-height: 30px
+
+.cityData svg
+  @include margin(10px null null)
+
+.cityData .averageTemp
+  font-size: 10px
