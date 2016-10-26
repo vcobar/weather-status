@@ -3,25 +3,43 @@
 body
   @include padding(0)
   @include margin(0)
+  @include background(mintcream)
   text-align: center
+  font-family: $helvetica
+  overflow-y: scroll
+
+body::-webkit-scrollbar
+  display: none
 
 #root
-  @include size(320px auto)
+  @include size(320px 100%)
   @include padding(0)
   @include margin(0)
+  @include background(white)
   text-align: center
+  display: inline-block
+
+#appTitle
+  @include size(100% 60px)
+  @include background(#2B2623)
+  @include border-color(null null #2AB9DA null)
+  @include border-style(null null solid null)
+  @include border-width(null null 8px null)
+  color: #ccc
+  line-height: 60px
+  font-weight: bold
   display: inline-block
 
 .searchBar
   display: inline-block
+  height: 70px
 
 .searchBar form
   @include size(253px auto)
   float: left
 
 .weatherLogo
-  @include size(65px)
-  @include border-left-radius(5px)
+  @include size(66px 65px)
   @include border-style(solid)
   @include border-width(thin)
   @include border-color(#c2c7d0)
@@ -34,7 +52,7 @@ body
   float: left
 
 .field
-  @include padding(0)
+  @include padding(0 0 0 5px)
   @include margin(0)
   @include size(188px 30px)
   @include border-color(#c2c7d0)
@@ -74,12 +92,45 @@ input:required:invalid
 
 .field:focus + .floating-label
   @include background(#0B0500)
-  color: #ECA163
+  color: #F7C569
 
 .searchButton
-  @include button(simple, orange)
+  @include button(simple, #F7C569)
   @include padding(25px 10px)
   @include border-left-radius(0)
   @include size(65px 67px)
   font-size: 12px
   float: left
+
+#weatherData
+  @include size(100% auto)
+
+#weatherData .city
+  @include border-color(#fff null)
+  @include border-style(solid null)
+  @include border-width(5px null)
+  @include size(98% auto)
+
+.city .cityName
+  @include background(lightblue)
+  @include size(100% auto)
+  @include border-color(#2B2623)
+  @include border-style(solid)
+  @include border-width(1px)
+  @include border-top-radius(5px)
+  line-height: 30px
+
+.city .cityData
+  @include background(azure)
+  @include size(100% auto)
+  @include border-color(null #2B2623 #2B2623 #2B2623)
+  @include border-style(null solid solid solid)
+  @include border-width(null 1px 1px 1px)
+  @include border-bottom-radius(5px)
+  line-height: 30px
+
+.cityData svg
+  @include margin(10px null null)
+
+.cityData .averageTemp
+  font-size: 10px
