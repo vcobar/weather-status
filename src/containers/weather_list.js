@@ -1,22 +1,30 @@
 import _ from 'lodash';
+import moment from 'moment';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Chart from '../components/chart';
+import WeatherDays from '../components/weather_days';
 
 class WeatherList extends Component {
 
   renderWeather(cityData) {
     // const temperatures = _.map(cityData.list.map(weather => weather.temp.day), (temp) => (temp * 9/5) - 459.67);
     //T(K) × 9/5 - 459.67
-    const temperatures = cityData.list.map(weather => weather.temp.day);
-    console.log(temperatures);
+    const weatherData = cityData.list.map(weatherObject => ({
+      tempDate: moment.unix(weatherObject.dt).format("ddd MMM DD"),
+      tempHigh: weatherObject.temp.max,
+      tempLow: weatherObject.temp.min,
+      windSpeed: weatherObject.speed,
+      description: _.startCase(_.toLower(weatherObject.weather[0].description)),
+      icon: weatherObject.weather[0].icon
+    }));
+    console.log(weatherData);
 
     return (
       <div key={cityData.city.id} className="city">
         <div className="cityName">
-          {cityData.city.name}
+          {_.upperCase(cityData.city.name)}
         </div>
-        <Chart data={temperatures} color="lightblue" type="avg" units="F" />
+        <WeatherDays data={weatherData} color="#F7C569" type="avg" units="&#8457;" />
       </div>
     );
   }
