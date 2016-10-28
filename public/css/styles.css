@@ -156,7 +156,8 @@ input:required:invalid {
   border-top-width: 5px;
   border-bottom-width: 5px;
   height: auto;
-  width: 98%; }
+  width: 314px;
+  margin: 0 auto; }
 
 .city .cityName {
   background: lightblue;
@@ -168,7 +169,9 @@ input:required:invalid {
   border-width: 1px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  line-height: 30px; }
+  line-height: 30px;
+  font-size: 14px;
+  font-weight: bold; }
 
 .city .cityData {
   background: azure;
@@ -193,5 +196,58 @@ input:required:invalid {
 
 .cityData .averageTemp {
   font-size: 10px; }
+
+.cityForecast {
+  background: azure;
+  background: azure;
+  height: 135px;
+  width: 315px;
+  border-right-color: #2B2623;
+  border-bottom-color: #2B2623;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px; }
+
+.cityDay {
+  height: 100%;
+  width: 62px;
+  border-bottom-color: #2B2623;
+  border-left-color: #2B2623;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  font-size: 10px;
+  float: left;
+  line-height: 15px; }
+
+.cityDay div {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-left: 5px;
+  text-align: left; }
+
+.cityDay .tempDate {
+  margin: 0;
+  background: ghostwhite;
+  background: ghostwhite;
+  border-bottom-color: #2B2623;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  font-weight: bold;
+  line-height: 20px; }
+
+.cityDay .weatherDescription {
+  margin: 0; }
+
+.cityDay .highTemp span {
+  color: red; }
+
+.cityDay .lowTemp span {
+  color: blue; }
 
 /*# sourceMappingURL=styles.css.map */

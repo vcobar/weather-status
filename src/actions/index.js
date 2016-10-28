@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_KEY = '95e88320b7a74ecceab946305af2213c'
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${API_KEY}`;
 const COUNTRY_CODE = 'us';
-const FORECAST_DAYS = 7;
+const FORECAST_DAYS = 5;
 
 export const FETCH_WEATHER = 'FETCH_WEATHER';
 

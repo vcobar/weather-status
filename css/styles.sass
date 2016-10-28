@@ -109,7 +109,8 @@ input:required:invalid
   @include border-color(#fff null)
   @include border-style(solid null)
   @include border-width(5px null)
-  @include size(98% auto)
+  @include size(314px auto)
+  @include margin(0 auto)
 
 .city .cityName
   @include background(lightblue)
@@ -119,6 +120,8 @@ input:required:invalid
   @include border-width(1px)
   @include border-top-radius(5px)
   line-height: 30px
+  font-size: 14px
+  font-weight: bold
 
 .city .cityData
   @include background(azure)
@@ -134,3 +137,44 @@ input:required:invalid
 
 .cityData .averageTemp
   font-size: 10px
+
+.cityForecast
+  @include background(azure)
+  @include size(315px 135px)
+  @include border-color(null #2B2623 #2B2623 null)
+  @include border-style(null solid solid null)
+  @include border-width(null 1px 1px 1px)
+  @include border-bottom-radius(5px)
+
+
+.cityDay
+  @include size(62px 100%)
+  @include border-color(null null #2B2623 #2B2623)
+  @include border-style(null null solid solid)
+  @include border-width(null null 1px 1px)
+  font-size: 10px
+  float: left
+  line-height: 15px
+
+.cityDay div
+  @include margin(2px null)
+  @include padding(null null null 5px)
+  text-align: left
+
+.cityDay .tempDate
+  @include margin(0)
+  @include background(ghostwhite)
+  @include border-color(null null #2B2623 null)
+  @include border-style(null null solid null)
+  @include border-width(null null 1px null)
+  font-weight: bold
+  line-height: 20px
+
+.cityDay .weatherDescription
+  @include margin(0)
+
+.cityDay .highTemp span
+  color: red
+
+.cityDay .lowTemp span
+  color: blue

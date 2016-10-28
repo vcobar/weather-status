@@ -14,7 +14,9 @@
     "redux-promise": "^0.5.3",
     "axios": "^0.15.2",
     "react-sparklines": "^1.6.0",
-    "react-google-maps": "^4.11.0"
+    "react-google-maps": "^4.11.0",
+    "moment": "^2.15.2",
+    "material-ui": "^0.16.1"
   },
   "scripts": {
     "start": "react-scripts start",
